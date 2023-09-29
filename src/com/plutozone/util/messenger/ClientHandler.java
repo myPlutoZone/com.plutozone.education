@@ -16,7 +16,7 @@
  * File			: ClientHandler.java
  * Notes		:
  * History		: [NO][Programmer][Description]
- *				: [20170614133300][pluto@plutozone.com][CREATE: Initial Release]
+ *				: [20170614133300][pluto#plutozone.com][CREATE: Initial Release]
  */
 package com.plutozone.util.messenger;
 
@@ -28,7 +28,7 @@ import java.util.Vector;
 
 /**
  * @version 1.0.0
- * @author pluto@plutozone.com
+ * @author pluto#plutozone.com
  * 
  * @since 2017-06-14
  * <p>DESCRIPTION: 메신저 클라이언트 핸들러 클래스</p>
