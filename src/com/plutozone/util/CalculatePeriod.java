@@ -75,10 +75,15 @@ public class CalculatePeriod {
 		String[] arrSubject	= {"e-Commerce", "HTML + CSS + JavaScript", "Java + JSP + Spring", "DBMS + SQL", "Service + Plaform(Solution-A)", "Android", "AI(Phthon) + RPA", "Payment", "Credit", "Mini Project(Solution-B)", "Main Project(Solution-A)"};
 		int[] arrHour		= {12, 60, 158, 50, 58, 80, 150, 26, 26, 60, 280};
 		
-		// String[] arrSubject	= {"Pre-Education", "e-Commerce", "Java + JSP + Spring", "DBMS + SQL", "HTML + CSS + JavaScript", "Service + Plaform(Solution-A)", "Payment", "Credit", "Android", "AI(Phthon) + RPA", "Mini Project(Solution-B)", "Main Project(Solution-A)"};
-		// int[] arrHour	= {80, 12, 158, 50, 60, 58, 26, 26, 80, 150, 60, 280};
+		//String[] arrSubject	= {"e-Commerce", "Java + JSP + Spring", "DBMS + SQL", "HTML + CSS + JavaScript", "Service + Plaform(Solution-A)", "Payment", "Credit", "Android", "AI(Phthon) + RPA", "Mini Project(Solution-B)", "Main Project(Solution-A)"};
+		//int[] arrHour		= {12, 158, 50, 60, 58, 26, 26, 80, 150, 60, 280};
 		
-		// int[] arrHour	= {8, 8, 12, 24, 48, 96, 3, 6, 12, 24, 48, 96};
+		//String[] arrSubject	= {"1", "2", "3", "4"};
+		//int[] arrHour		= {14, 4, 8, 120 * 8 - 26};
+		
+		//String[] arrSubject	= {"All"};
+		//int[] arrHour		= {960};
+		
 		
 		int countSubject	= arrSubject.length;
 		/** 소요 일수 */
@@ -195,8 +200,8 @@ public class CalculatePeriod {
 		/** 이번 과목의 종료 일자와 남은 시간 */
 		Map<String, Integer> dateEnds = new HashMap<String, Integer>();
 		
-		int days = (int) Math.ceil(hour / 8.0);
-		int dateStartRemainHour = (hour - dateEndRemainHour) % 8;
+		int days = (int) Math.ceil(hour / 8.0);	
+		if (dateEndRemainHour == 8 ) dateEndRemainHour = 0;
 		
 		// 이전 과목의 종료 일자에 남은 시간이 있는 경우
 		if (dateEndRemainHour > 0) {
@@ -207,8 +212,13 @@ public class CalculatePeriod {
 			}
 			// 남은 시간이 소요 시간보다 작은 경우
 			else {
-				/** 이번 과목의 종료 일자 = 소요 일자 and 남은 시간 = 8 - 소진 후 소요 시간의 남은 시간 */
-				dateEnds.put(calculateDate(dateStart, days - 1), 8 - dateStartRemainHour);
+				/** 이번 과목의 종료 일자 = 소요 일자 또는 소요 일자 - 1일 and 남은 시간 = 8 - 소진 후 소요 시간의 남은 시간 */
+				if ((hour - dateEndRemainHour) / 8 == days - 1 && (hour - dateEndRemainHour) % 8 > 0 ) {
+					dateEnds.put(calculateDate(dateStart, days), 8 - (hour - dateEndRemainHour) % 8);
+				}
+				else {
+					dateEnds.put(calculateDate(dateStart, days - 1), 8 - (hour - dateEndRemainHour) % 8);
+				}
 			}
 		}
 		// 이전 과목의 종료 일자에 남은 시간이 없을 경우
@@ -216,7 +226,6 @@ public class CalculatePeriod {
 			/** 이번 과목의 종료 일자 = 소요 일자 - 1일 and 남은 시간 = 8 - 소요 시간의 남은 시간 */
 			dateEnds.put(calculateDate(dateStart, days - 1), 8 - (hour % 8));
 		}
-		
 		return dateEnds;
 	}
 	
@@ -324,8 +333,6 @@ public class CalculatePeriod {
 				}
 			}
 			sumDay++;
-			
-			
 		}
 		
 		// if (day > -1) System.out.print(" 휴일 " + String.format("%2d", countHoliday) + "일");
