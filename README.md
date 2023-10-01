@@ -1,5 +1,5 @@
 # com.plutozone.education
-Source and Example for Education
+Only Example and Demo for Education(Open source exists in a other repository!)
 
 # History
 - 2023-09-29 [UPDATE] Repository Name(The previous repository name was com.plutozone.programming.java)
