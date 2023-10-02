@@ -26,8 +26,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ include file="/console/include/header.jsp" %>
-	<link rel="stylesheet" href="/common/css/main.css" type="text/css" />
+	<%@ include file="/include/header.jsp" %>
+	<link rel="stylesheet" href="/css/main.css" type="text/css" />
 	<script type="text/javascript" src="/console/js/common.Form.min-1.0.0.js"></script>
 	<script type="text/javascript" src="/console/js/common.Number.min-1.0.0.js"></script>
 	<script type="text/javascript" src="/console/js/common.Text.min-1.0.0.js"></script>
@@ -163,7 +163,7 @@
 		</article>
 	</section>
 	<footer>
-		<%@ include file="/console/include/footer.jsp" %>
+		<%@ include file="/include/footer.jsp" %>
 	</footer>
 </div>
 </form>
