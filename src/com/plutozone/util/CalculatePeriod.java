@@ -64,7 +64,7 @@ public class CalculatePeriod {
 	public static void main(String[] args) {
 		
 		/** 시작 일자(초기값 포함), 종료 일자와 남은 시간(초기값) */
-		String dateStart		= "20231010";
+		String dateStart		= "20231024";
 		String dateEnd			= "";
 		int dateEndRemainHour	= 0;
 		
