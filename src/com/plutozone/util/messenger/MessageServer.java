@@ -20,6 +20,9 @@
  */
 package com.plutozone.util.messenger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -34,6 +37,9 @@ import java.net.Socket;
  */
 public class MessageServer {
 	
+	/** Logger */
+	private static Logger logger = LoggerFactory.getLogger(MessageServer.class);
+	
 	/** Server */
 	ServerSocket server		= null;
 	
@@ -41,7 +47,12 @@ public class MessageServer {
 	public Socket client	= null;
 	
 	public static void main(String args[]) {
-		new MessageServer(8888);
+		
+		int port = 8080;
+		
+		if (args.length > 0 && args[0] != null && !args[0].equals("")) port = Integer.parseInt(args[0]);
+		
+		new MessageServer(port);
 	}
 	
 	/**
@@ -56,16 +67,20 @@ public class MessageServer {
 		try {
 			server = new ServerSocket(port);
 			
+			logger.info("-------------------------------------------");
+			logger.info("The server has started at " + port + " port");
+			logger.info("-------------------------------------------");
+			
 			while (true) {
 				client = server.accept();
-				System.out.println("Client accpeted..." + client.getInetAddress().getHostAddress());
+				logger.info("A new client has connected... " + client.getInetAddress().getHostAddress());
 				
-				ClientHandler handler = new ClientHandler(client);
-				handler.start();
+				ClientHandler clientHandler = new ClientHandler(client);
+				clientHandler.start();
 			}
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			logger.error("[" + this.getClass().getName() + ".MessageServer()] " + e.getMessage(), e);
 		}
 	}
 }

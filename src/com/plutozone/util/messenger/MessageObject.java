@@ -31,10 +31,10 @@ import java.io.Serializable;
  * <p>IMPORTANT:</p>
  */
 class MessageObject implements Serializable {
-
+	
 	/** Serial version UID */
 	private static final long serialVersionUID = 20170614134100L;
-
+	
 	/** Name */
 	protected String name;
 	
@@ -43,7 +43,7 @@ class MessageObject implements Serializable {
 	
 	/** Control */
 	protected int control;
-
+	
 	/**
 	 * @param control [상태]
 	 * @param name [이름]
@@ -55,31 +55,31 @@ class MessageObject implements Serializable {
 	 * <p>EXAMPLE:</p>
 	 */
 	public MessageObject(int control, String name, String message) {
-		this.control = control;
-		this.name = name;
-		this.message = message;
+		this.control	= control;
+		this.name		= name;
+		this.message	= message;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public String getMessage() {
 		return message;
 	}
-
+	
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
+	
 	public int getControl() {
 		return control;
 	}
-
+	
 	public void setControl(int control) {
 		this.control = control;
 	}

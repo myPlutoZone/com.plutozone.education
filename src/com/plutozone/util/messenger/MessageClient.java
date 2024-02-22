@@ -36,6 +36,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @version 1.0.0
  * @author pluto#plutozone.com
@@ -46,6 +49,9 @@ import java.net.Socket;
  */
 public class MessageClient extends Frame implements Runnable, ActionListener, WindowListener {
 	
+	/** Logger */
+	private static Logger logger = LoggerFactory.getLogger(MessageClient.class);
+	
 	/** Serial version UID */
 	private static final long serialVersionUID = 20170614133900L;
 	
@@ -54,6 +60,7 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 	
 	/** Socket */
 	protected Socket socket;
+	public String ip;
 	public int port;
 	
 	/** Input/Output Object Stream */
@@ -62,15 +69,22 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 	
 	/** UI */
 	protected Button btnConnect, btnDisconnect;
-	protected TextArea fieldContent;
-	protected TextField fieldName;
-	protected TextField fieldMessage;
+	protected TextArea txtContent;
+	protected TextField txtName;
+	protected TextField txtMessage;
 	
 	/** Connection State */
 	protected boolean isConnected = false;
 	
 	public static void main(String[] args) {
-		new MessageClient(8888);
+		
+		String ip	= "127.0.0.1";
+		int port	= 8080;
+		
+		if (args.length > 1 && args[0] != null && !args[0].equals("")) ip = args[0];
+		if (args.length > 1 && args[1] != null && !args[1].equals("")) port = Integer.parseInt(args[1]);
+		
+		new MessageClient(ip, port);
 	}
 	
 	/**
@@ -81,16 +95,17 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 	 * <p>IMPORTANT:</p>
 	 * <p>EXAMPLE:</p>
 	 */
-	public MessageClient(int port) {
+	public MessageClient(String ip, int port) {
 		
 		super("Messenger GUI(Java AWT) Client Version 1.0.0");
 		
-		this.port = port;
+		this.ip		= ip;
+		this.port	= port;
 		
-		Panel conPanel = new Panel();
-		Label lbl = new Label("Name: ");
-		fieldName = new TextField("Your Name");
-		fieldName.selectAll();
+		Panel conPanel		= new Panel();
+		Label lbl			= new Label("Name: ");
+		txtName				= new TextField("Your Name");
+		txtName.selectAll();
 		
 		btnConnect = new Button("Connect");
 		btnConnect.addActionListener(this);
@@ -99,20 +114,20 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 		btnDisconnect.addActionListener(this);
 		
 		conPanel.add(lbl);
-		conPanel.add(fieldName);
+		conPanel.add(txtName);
 		conPanel.add(btnConnect);
 		conPanel.add(btnDisconnect);
 		
-		fieldContent = new TextArea();
-		fieldContent.setEditable(false);
+		txtContent = new TextArea();
+		txtContent.setEditable(false);
 		
-		fieldMessage = new TextField();
-		fieldMessage.addActionListener(this);
+		txtMessage = new TextField();
+		txtMessage.addActionListener(this);
 		
 		setLayout(new BorderLayout());
 		add("North", conPanel);
-		add("Center", fieldContent);
-		add("South", fieldMessage);
+		add("Center", txtContent);
+		add("South", txtMessage);
 		
 		addWindowListener(this);
 		setSize(500, 400);
@@ -133,14 +148,14 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 		if (mode == true) {
 			btnConnect.setEnabled(false);
 			btnDisconnect.setEnabled(true);
-			fieldName.setEditable(false);
-			fieldMessage.setEditable(true);
+			txtName.setEditable(false);
+			txtMessage.setEditable(true);
 		}
 		else {
 			btnConnect.setEnabled(true);
 			btnDisconnect.setEnabled(false);
-			fieldName.setEditable(true);
-			fieldMessage.setEditable(false);
+			txtName.setEditable(true);
+			txtMessage.setEditable(false);
 		}
 	}
 	
@@ -158,7 +173,7 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 				objectOutputStream.close();
 			}
 			catch (IOException e) {
-				e.printStackTrace();
+				logger.error("[" + this.getClass().getName() + ".stop()] " + e.getMessage(), e);
 			}
 		}
 	}
@@ -175,10 +190,10 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 		while (isConnected) {
 			try {
 				messageObject = (MessageObject) objectInputStream.readObject();
-				fieldContent.append("[" + messageObject.getName() + "]" + messageObject.getMessage() + "\r\n");
+				txtContent.append("[" + messageObject.getName() + "]" + messageObject.getMessage() + "\r\n");
 			}
 			catch (Exception e) {
-				e.printStackTrace();
+				logger.error("[" + this.getClass().getName() + ".run()] " + e.getMessage(), e);
 			}
 		}
 	}
@@ -196,50 +211,54 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 		
 		if (actionEvent.getSource() == btnConnect) {
 			try {
-				socket = new Socket("localhost", port);
+				socket = new Socket(ip, port);
 				objectInputStream = new ObjectInputStream(socket.getInputStream());
 				objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
 			}
 			catch (IOException e) {
-				e.printStackTrace();
+				logger.error("[" + this.getClass().getName() + ".actionPerformed().btnConnect] " + e.getMessage(), e);
 				return;
 			}
 			
-			String message = "************** " + fieldName.getText() + " has arrived! **************";
-			MessageObject content = new MessageObject(1, fieldName.getText(), message);
+			String message = "************** " + txtName.getText() + " has arrived! **************";
+			MessageObject content = new MessageObject(1, txtName.getText(), message);
 			broadcast(content);
 			
-			fieldMessage.setText("");
+			txtMessage.setText("");
 			isConnected = true;
 			listener = new Thread(this);
 			listener.start();
 			setChatMode(true);
 		}
 		else if (actionEvent.getSource() == btnDisconnect) {
-			String message = "************** " + fieldName.getText() + " has exit! **************";
-			MessageObject co = new MessageObject(-1, fieldName.getText(), message);
+			String message = "************** " + txtName.getText() + " has exit! **************";
+			MessageObject co = new MessageObject(-1, txtName.getText(), message);
 			try {
 				objectOutputStream.writeObject(co);
 				objectOutputStream.flush();
 			}
 			catch (IOException e) {
+				
+				logger.error("[" + this.getClass().getName() + ".actionPerformed().btnDisconnect1st] " + e.getMessage(), e);
 				try {
 					objectOutputStream.close();
 					objectInputStream.close();
 					socket.close();
 				}
-				catch (Exception ioe) {}
+				catch (Exception ioe) {
+					logger.error("[" + this.getClass().getName() + ".actionPerformed().btnDisconnect2nd] " + e.getMessage(), ioe);
+				}
 			}
 			isConnected = false;
-			listener.stop();
+			if (listener != null) listener.stop();
 			setChatMode(false);
 		}
-		else if (actionEvent.getSource() == fieldMessage) {
-			if (fieldMessage.getText().equals("")) return;
+		else if (actionEvent.getSource() == txtMessage) {
+			if (txtMessage.getText().equals("")) return;
 			
-			MessageObject content = new MessageObject(1, fieldName.getText(), fieldMessage.getText());
+			MessageObject content = new MessageObject(1, txtName.getText(), txtMessage.getText());
 			broadcast(content);
-			fieldMessage.setText("");
+			txtMessage.setText("");
 		}
 	}
 	
@@ -254,19 +273,22 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 	@SuppressWarnings("deprecation")
 	public void windowClosing(WindowEvent windowEvent) {
 		
-		String message = "************** " + fieldName.getText() + " has exit! **************";
-		MessageObject co = new MessageObject(-1, fieldName.getText(), message);
+		String message = "************** " + txtName.getText() + " has exit! **************";
+		MessageObject co = new MessageObject(-1, txtName.getText(), message);
 		try {
 			objectOutputStream.writeObject(co);
 			objectOutputStream.flush();
 		}
 		catch (IOException e) {
+			logger.error("[" + this.getClass().getName() + ".windowClosing()1st] " + e.getMessage(), e);
 			try {
 				objectOutputStream.close();
 				objectInputStream.close();
 				socket.close();
 			}
-			catch (Exception ioe) {	}
+			catch (Exception ioe) {	
+				logger.error("[" + this.getClass().getName() + ".windowClosing()2nd] " + e.getMessage(), ioe);
+			}
 		}
 		
 		if (listener != null) listener.stop();
@@ -289,7 +311,7 @@ public class MessageClient extends Frame implements Runnable, ActionListener, Wi
 			objectOutputStream.flush();
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			logger.error("[" + this.getClass().getName() + ".broadcast()] " + e.getMessage(), e);
 		}
 	}
 	
