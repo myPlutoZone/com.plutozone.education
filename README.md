@@ -3,14 +3,18 @@ Only Example and Demo for Education(Open source exists in a other repository!)
 
 
 # 2. Contents
-# 2-1. Client
-# 2-1-1. HTML
-# 2-1-2. CSS
-# 2-1-3. JavaScript
-# 2-2. Server
-	# 2-2-1. JSP
-	# 2-2-2. Java
-		- Code Templates at Eclipse(References > Java > Code Style > Code Templates > Code > New Java files
+
+## 2-1. Client
+### 2-1-1. HTML
+### 2-1-2. CSS
+### 2-1-3. JavaScript
+
+## 2-2. Server
+### 2-2-1. JSP
+### 2-2-2. Java
+
+- Code Templates at Eclipse(References > Java > Code Style > Code Templates > Code > New Java files
+
 ```java
 /**
  * YOU ARE STRICTLY PROHIBITED TO COPY, DISCLOSE, DISTRIBUTE, MODIFY OR USE THIS PROGRAM
@@ -44,11 +48,11 @@ ${package_declaration}
  */
 ${typecomment}
 ${type_declaration}
-```		
-		
-# 2-3. Database
-# 2-4. Mobile
-# 2-5. RPA + AI
+```
+
+## 2-3. Database
+## 2-4. Mobile
+## 2-5. RPA + AI
 
 
 # 3. History
