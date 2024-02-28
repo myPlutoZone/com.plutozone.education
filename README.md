@@ -4,13 +4,13 @@
 
 
 # Introduction to com.plutozone.education
-Example and Demo for IT(Information Technology) Education(Open source exists in a other repository!)
+Example and Demo for IT(Information Technology) Education(Open source exists in a other repository! only MarkDown + Source + Image + PDF)
 
 
 # Contents
-1. [Fundamental of IT(Information Technology) .............. 정보기술 기본](#fundamental-of-it-information-technology)
-2. [Client .................................................... 클라이언트](#client-programming)
-3. [Server .......................................................... 서버](#server-programming)
+1. [Fundamental of IT(Information Technology) ......................... 정보기술 기본](#fundamental-of-it-information-technology)
+2. [Client Programming ........................................ 클라이언트 프로그래밍](#client-programming)
+3. [Server Programming .............................................. 서버 프로그래밍](#server-programming)
 
 
 # Fundamental of IT(Information Technology)
@@ -57,16 +57,16 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 
 ## 정보기술(IT, Information Technology) 조직도
 - NCS(National Competency Standards, 국가직무능력표준-https://www.ncs.go.kr)
+![정보기술 조직도](./image/fundamentalIT/it_org_chart.png)
 - 정보 기술(IT, Information Technology) vs. 정보 통신(IT, Information Telecommunication)
-- `#FF0000` 조직도
 
 ## 업무 프로세스와 개발 표준 가이드 for 웹 개발자
 
 ### 업무 프로세스
-- `#FF0000` 표준 업무와 폴더 등
+![표준 업무와 폴더](./image/fundamentalIT/bizProcess.png)
 
 ### 개발 표준 가이드 for 웹 개발자
-- `#FF0000` 개발 표준 가이드
+![개발 표준 가이드](./image/fundamentalIT/devStandardGuide.png)
 
 ## 선택과 준비
 
@@ -81,8 +81,8 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 - [권장] 용어, 폰트, 로고 및 양식 등
 - [중요] 1) 목표 프로젝트(헌장)을 분석 및 설계하고 2) 과목과 솔루션을 진행하면서 모듈화하여 3) 구현 및 관리
 - [산출물] 요구 사항, 분석, 설계, 화면(프론트 vs. 백앤드 + 웹 vs. 앱 등)과 기능(화면 vs. 로직 vs. API 등) 그리고 검증
-- `#FF0000` 프로젝트 헌장
-- `#FF0000` 프로젝트 관리
+![프로젝트 헌장](./image/fundamentalIT/projectCharter.png)
+![프로젝트 관리](./image/fundamentalIT/projectManage.png)
 
 ## Network와 NOS 그리고 Server와 Client
 
@@ -152,11 +152,11 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 - TCP/IP(Transmission Control Protocol/Internet Protocol) Protocol
 	- 인터넷 표준 Protocol
 	- OSI 7 Layer의 Transport Layer(TCP)와 Network Layer(IP)가 혼합된 형태로 응용 Protocol(HTTP, FTP, …)의 Base Protocol
-	- `#FF0000` OSI 7 Layer에서 Protocol
+![TCP/IP](./image/fundamentalIT/tcpip.png)
 - TCP/IP 데이터 전송 과정
-	- `#FF0000` Layer에 따른 전송 과정
+![TCP/IP](./image/fundamentalIT/tcpipFlow.png)
 - TCP/IP Handshake(가상 회선의 상태와 의미)
-	- `#FF0000` Handshake
+![TCP/IP](./image/fundamentalIT/tcpipHandshake.png)
 - IP(Internet Protocol) Address Class
 	- `#FF0000` IP Address Class
 - Subnet Mask
@@ -332,7 +332,7 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 - MariaDB, Oracle 등
 
 ### 과목 교육 및 프로젝트 시
-- 1) 개념과 목차 그리고 나를 위한 문서화와 용도에 따른 코드화 2) 자동 완성 그리고 3) 검색
+- [중요] 1) 개념과 목차 그리고 나를 위한 문서화와 용도에 따른 코드화 2) 자동 완성 그리고 3) 검색
 - 6개월간 16개 과목(Network, OS 포함) + Mini Project + Main Project
 - PBL(Project and Problem based Project)
 
