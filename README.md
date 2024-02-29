@@ -62,8 +62,14 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 
 ## 정보기술(IT, Information Technology) 조직도
 - NCS(National Competency Standards, 국가직무능력표준-https://www.ncs.go.kr)
-![정보기술 조직도](./image/fundamentalIT/it_org_chart.png)
 - 정보 기술(IT, Information Technology) vs. 정보 통신(IT, Information Telecommunication)
+- Software Architect(SA, 소프트웨어 아키텍트)의 분류
+	- AA(Application Architect: 개발 표준, 프레임워크 등 설계자)
+	- TA(Technical Architect: OS, WAS, DB 설치 등 하트웨어와 네트워크 담당자)
+	- DA(Data Architect: 데이터 표준, 구조, 마이그레이션 등 설계자-DBA의 상위 개념)
+	- BA(Business Architect: 기술적 관점이 아닌 업무 관점의 프로세스 설계자-실제 고객의 요구에 따라 첫 개발 지표가 되는 부분)
+	- QA(Quality Assurance: 산출물과 소스코드에 대한 품질 담당자)
+![정보기술 조직도](./image/fundamentalIT/it_org_chart.png)
 
 ## 업무 프로세스와 개발 표준 가이드 for 웹 개발자
 
@@ -408,6 +414,14 @@ ${type_declaration}
 # Mobile
 
 
+# AI
+- https://chat.openai.com/auth/login
+- https://platform.openai.com/
+- https://bard.google.com/
+- https://learn.microsoft.com/ko-kr/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Cpython&pivots=programming-language-studio
+- https://clova-x.naver.com/
+
+
 # Management
 ## 개요
 - 보안은 네트워크, 서버, 미들웨어, 서비스 등 모든 노드에 설정할 수 있다.
@@ -422,10 +436,52 @@ ${type_declaration}
 	1. 규모를 산정하라.
 	2. 개발, 상용 등 모든 인프라(Firewall, LB, DNS, Network, Server, Monitoring 등)를 설계하고 클라우드를 생성하라.
 	3. 템플릿, AC(Container)S/AK(Kubernetes)S로 자동화하라.
-	4. S(Service, Office365)aaS, P(Platform, 개발 서버)aaS, B(Backend, Firebase)aaS, F(Front, CodeAnywhere/Azure Event)aaS, Hybrid Cloude 및 Multi Cloude를 활용하라.
+	4. S(Service, Office365)aaS, P(Platform, 개발 서버)aaS, B(Backend, Firebase)aaS, F(Front, CodeAnywhere/Azure Event)aaS, Hybrid Cloud 및 Multi Cloud를 활용하라.
 
 ## 서비스 개발 및 관리
 - 빠른 응답 속도와 최소 자원 사용을 위해 코드 최적화할 것
+
+## 시스템 및 서비스 유지운영을 위한 주요 정보 및 메뉴얼
+`#FF0000` 프로젝트 폴더와 통합할 것-산출물 상세화 포함
+<table>
+<tr>
+	<td>구분</td>
+	<td>정보</td>
+	<td>참고</td>
+</tr>
+<tr>
+	<td rowspan=3>분석</td>
+	<td>IDC or Cloud</td>
+	<td>계약, 입출고, 출입자/사용자 등</td>
+</tr>
+<tr>
+	<td>시스템</td>
+	<td>방화벽, 서버, 네트워크 등에 대한 제품, 설정 정보, 메뉴얼, 접속 등</td>
+</tr>
+<tr>
+	<td>담당자</td>
+	<td>고객사,  협력사, 관계사 등</td>
+</tr>
+<tr>
+	<td rowspan=2>설계</td>
+	<td>시스템 구성도</td>
+	<td></td>
+</tr>
+<tr>
+	<td>서비스 구성도</td>
+	<td></td>
+</tr>
+<tr>
+	<td>구현</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>검증</td>
+	<td></td>
+	<td>프론트, 백엔드, 유지운영(시스템, 서비스 및  장애 포함) 메뉴얼</td>
+</tr>
+</table>
 
 
 # History
