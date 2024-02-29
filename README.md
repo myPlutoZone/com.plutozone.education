@@ -11,6 +11,11 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 1. [Fundamental of IT(Information Technology) ......................... 정보기술 기본](#fundamental-of-it-information-technology)
 2. [Client Programming ........................................ 클라이언트 프로그래밍](#client-programming)
 3. [Server Programming .............................................. 서버 프로그래밍](#server-programming)
+4. [Database ........................................................... 데이터베이스](#database)
+5. [Mobile ................................................................... 모바일](#mobile)
+6. [Management .................................... 시스템과 서비스에 대한 관리(정책)](#management)
+7. [History .................................................................... 이력](#history)
+8. [Reference .................................................................. 참고](#reference)
 
 
 # Fundamental of IT(Information Technology)
@@ -403,10 +408,24 @@ ${type_declaration}
 # Mobile
 
 
-# RPA
+# Management
+## 개요
+- 보안은 네트워크, 서버, 미들웨어, 서비스 등 모든 노드에 설정할 수 있다.
 
+## 시스템 구축 및 관리
+- 시스템 성능 향상
+	- 경우에 따라 CPU 절전 기능 해제 시에만 최대 Clock 적용됨
+	- 경우에 따라 Memory Bank 모두 채울 때 최대 속도 적용됨
+- 호스트명은 난독화할 것
+- 사용하지 않는 서비스는 제거(uninstall) 또는 중지(stop)하여 가용 시스템 리소스를 최대화할 것
+- 클라우드(IaaS) 도입 시
+	1. 규모를 산정하라.
+	2. 개발, 상용 등 모든 인프라(Firewall, LB, DNS, Network, Server, Monitoring 등)를 설계하고 클라우드를 생성하라.
+	3. 템플릿, AC(Container)S/AK(Kubernetes)S로 자동화하라.
+	4. S(Service, Office365)aaS, P(Platform, 개발 서버)aaS, B(Backend, Firebase)aaS, F(Front, CodeAnywhere/Azure Event)aaS, Hybrid Cloude 및 Multi Cloude를 활용하라.
 
-# AI
+## 서비스 개발 및 관리
+- 빠른 응답 속도와 최소 자원 사용을 위해 코드 최적화할 것
 
 
 # History
