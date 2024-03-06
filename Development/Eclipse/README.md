@@ -1,11 +1,14 @@
-### Eclipse
-- When a `Git password` error occurs
+# Eclipse
+
+## Configuration
+- Workspace
 
 ```
-C:\del C:\Users\%USER%\.eclipse\org.eclipse.equinox.security\secure_storage
+# 하기 파일에서 RECENT_WORKSPACES 값을 삭제 또는 변경
+C:\> notepad.exe %ECLIPSE%\configuration\.settings\org.eclipse.ui.ide.prefs
 ```
 
-- `Code Templates` at Eclipse(References > Java > Code Style > Code Templates > Code > New Java files)
+- Code Templates at Eclipse(References > Java > Code Style > Code Templates > Code > New Java files)
 
 ```java
 /**
@@ -40,4 +43,31 @@ ${package_declaration}
  */
 ${typecomment}
 ${type_declaration}
+```
+
+## Plug-in(Help > Install New Software)
+- Properties Editor(http://propedit.sourceforge.jp/eclipse/updates)
+
+```
+# 하기와 같이 수동으로 플러그인 설치 가능
+C:> copy jp.gr.java_conf.ussiy.app.propedit_6.0.5.jar %ECLIPSE%\plugins
+C:> notepad.exe %ECLIPSE%\configuration\org.eclipse.equinox.simpleconfigurator\bundles.info
+...
+# 하기 라인을 추가
+jp.gr.java_conf.ussiy.app.propedit,6.0.5,plugins/jp.gr.java_conf.ussiy.app.propedit_6.0.5.jar,4,false
+...
+```
+
+## Tip
+- When a Git password Error occurs
+
+```
+C:\del C:\Users\%USER%\.eclipse\org.eclipse.equinox.security\secure_storage
+```
+
+- Remove Launch History
+
+```
+# 하기 경로에서 파일을 삭제
+%WORKSPACE%/.metadata/.plugins/org.eclipse.debug.core/.launches
 ```
