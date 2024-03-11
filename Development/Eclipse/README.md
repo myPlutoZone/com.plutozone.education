@@ -62,6 +62,8 @@ jp.gr.java_conf.ussiy.app.propedit,6.0.5,plugins/jp.gr.java_conf.ussiy.app.prope
 - When a Git password Error occurs
 
 ```
+Delete ID/Value Informations at References > General > Security > Secure Storage > Contents > GIT
+or
 C:\del C:\Users\%USER%\.eclipse\org.eclipse.equinox.security\secure_storage
 ```
 
