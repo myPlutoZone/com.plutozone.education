@@ -1,6 +1,6 @@
 # JavaScript
 
-## JavaScript 특징과 기본 문법
+## JavaScript 특징과 기본 문법들
 
 ### 에러 시 at Chrome
 
@@ -26,27 +26,60 @@
 </body>
 ```
 
-- 주석: //, /* …*/
-- 전역 또는 지역 변수(예약어 등 주의 사항): var
-- 자료형: String("), Char('), Number, Boolean(true, false), Undefined
-- 연산자: 산술, 대입, 증감, 비교, 논리, 삼항 그리고 연산자 우선 순위
+- 주석
+	- //
+	- /* …*/
+- 전역 또는 지역 변수
+	- var
+	- 예약어
+- 자료형
+	- String(")
+	- Char(')
+	- Number
+	- Boolean(true, false)
+	- Undefined
+- 연산자
+	- 산술
+	- 대입
+	- 증감
+	- 비교
+	- 논리
+	- 삼항
+	- 연산자 우선 순위
 
 ### 제어문
-- 조건문(Conditional Statements): if, if/else, if/else if, if/else if/else, switch/case
-- 반복문(Loop Statements): while, do/while, for 그리고 break, continue
+- 조건문(Conditional Statements)
+	- if
+	- if/else
+	- if/else if
+	- if/else if/else
+	- switch/case
+- 반복문(Loop Statements)
+	- while
+	- do/while
+	- for
+	- break와 continue
 
 ### 객체(Object)
 - 객체(Object) = 메소드(Method) + 속성(Property) + 이벤트(Event)
 - 객체(All of Object in Browser's Script Engine)  in JavaScript
-내장 객체(Built-in Object): Object, String, Date, Array, Math, RegExp 등
-브라우저 객체 모델(BOM, Browser Object Model): window, screen, location, history, navigator 등
-문서 객체 모델(DOM, Document Object Model): HTML 문서 구조
+	- 내장 객체(Built-in Object): Object, String, Date, Array, Math, RegExp 등
+	- 브라우저 객체 모델(BOM, Browser Object Model): window, screen, location, history, navigator 등
+	- 문서 객체 모델(DOM, Document Object Model): HTML 문서 구조
 
 ### 함수(Function)
-- 정의: function fnName() {…}
+- 정의
+
+```
+function fnName() {…}
+```
+
 - 매개 변수
 - 리턴(return)과 값
-- 내장 함수(Built-in Function): encode*(), parse*(), eval() 등
+- 내장 함수(Built-in Function)
+	- encode*()
+	- parse*()
+	- eval() 등
 
 ## jQuery 개요와 객체(HTML Element) 선택과 조작 및 Event 처리
 
