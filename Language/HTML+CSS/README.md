@@ -15,4 +15,4 @@
 - [Button](./button.htm)
 - [Random Background](./randomBackground.html)
 - [Tree](tree.htm)
-- [Thumbnail](./thumbmail/thumbnail.htm)
+- [Thumbnail](./thumbnail/thumbnail.htm)

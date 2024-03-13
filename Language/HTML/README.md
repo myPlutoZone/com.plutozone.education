@@ -32,12 +32,27 @@
 - HTML
 	- 개요와 특징
 	- 구조
-	- 태그(Tag): a, p, br, img, table, form, input(text, password, radio, checkbox, button, submit, hidden), select, textarea 등
+	- 태그(Tag)
+		- a
+		- p
+		- br
+		- img
+		- table
+		- form
+		- input(text, password, radio, checkbox, button, submit, hidden)
+		- select
+		- textarea 등
 	- [시맨틱 태그(Semantic Tag)](../../WebContent/html/semantic.html) 와 레이아웃(Layout)
 - CSS(Cascade Style Sheet)
 	- 개요와 특징
-	- 선택자(Selector): Tag(<?>), Class(.), ID(#) 등
-	- 속성(Attribute)과 Value(값): font-family, font-size, color 등
+	- 선택자(Selector)
+		- Tag(<?>)
+		- Class(.)
+		- ID(#)
+	- 속성(Attribute)과 Value(값)
+		- font-family
+		- font-size
+		- color 등
 	- 레이아웃(Layout)의 역사(table, position, float, flex)
 - JavaScript
 	- 문법

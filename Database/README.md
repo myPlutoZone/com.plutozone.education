@@ -1,6 +1,6 @@
 # Recursive Query for Oracle and ANSI
 ```sql
---- 확인을 위한 테이블 생성과 데이터 적재
+--- 재귀 쿼리를 위한 테이블 생성과 데이터 적재
 CREATE TABLE TB_CTG
 	(SEQ_CTG INT NOT NULL
 	, NM VARCHAR(32)
