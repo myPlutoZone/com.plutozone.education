@@ -24,6 +24,7 @@
 <body>
 	<script> … </script>
 </body>
+...
 ```
 
 - 주석
@@ -71,7 +72,9 @@
 - 정의
 
 ```
+...
 function fnName() {…}
+...
 ```
 
 - 매개 변수
