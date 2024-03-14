@@ -145,11 +145,11 @@
 	- OSI 7 Layer의 Transport Layer(TCP)와 Network Layer(IP)가 혼합된 형태로 응용 Protocol(HTTP, FTP, …)의 Base Protocol
 ![TCP/IP](./image/tcpip.png)
 - TCP/IP 데이터 전송 과정
-![TCP/IP](./image/tcpipFlow.png)
+![TCP/IP Flow](./image/tcpipFlow.png)
 - TCP/IP Handshake(가상 회선의 상태와 의미)
-![TCP/IP](./image/tcpipHandshake.png)
+![TCP/IP Handshake](./image/tcpipHandshake.png)
 - IP(Internet Protocol) Address Class
-	- `#FF0000` IP Address Class
+![IP Class](./image/ipclass.png)
 - Subnet Mask
 - Gateway IP
 - Class 당 예약되어 사용할 수 없는 IP
@@ -195,7 +195,7 @@
 - 부하 분산과 확장성을 위한 Server(WEB + WAS + Database) 설계
 - Web Server, WAS의 설치, 운영 그리고 연동
 - WAS vs. CGI(WAS와 CGI의 기본적인 구조는 같으나 Web Server가 Application을 사용하는 방식에 차이가 있다. 또한 Application은 구현 방식에 따라 실행 코드 방식과 Script Code(JSP, ASP, PHP 등) 방식으로 구분)
-	- `#FF0000` WAS vs CGI 프로세스
+![WAS vs. CGI](./image/cgi.png)
 
 ### Client
 - Web Browser에는 Chrome, Edge 등이 있다.
@@ -238,7 +238,7 @@
 - https://www.erdcloud.com/, draw.io
 - eXERD, MySQL WorkBench, ERWin 등
 
-## Tool
+## Tools
 ### Presentation
 - Epic Pen
 
