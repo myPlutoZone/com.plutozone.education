@@ -63,17 +63,18 @@
 
 ### 객체(Object)
 - 객체(Object) = 메소드(Method) + 속성(Property) + 이벤트(Event)
-- 객체(All of Object in Browser's Script Engine)  in JavaScript
+- 객체(All of Object in Browser Script Engine) in JavaScript
 	- 내장 객체(Built-in Object): Object, String, Date, Array, Math, RegExp 등
 	- 브라우저 객체 모델(BOM, Browser Object Model): window, screen, location, history, navigator 등
 	- 문서 객체 모델(DOM, Document Object Model): HTML 문서 구조
+![Object](./image/object.png)
 
 ### 함수(Function)
 - 정의
 
 ```
 ...
-function fnName() {…}
+function functionName() {…}
 ...
 ```
 
