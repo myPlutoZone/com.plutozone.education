@@ -1,7 +1,7 @@
 # Eclipse
 
 ## Configuration
-- Workspace
+- Workspace settings when starting Eclipse
 
 ```
 # 하기 파일에서 RECENT_WORKSPACES 값을 삭제 또는 변경

@@ -8,14 +8,14 @@ Example and Demo for IT(Information Technology) Education(Open source exists in 
 
 
 # Contents
-1. [Fundamental of IT(Information Technology) . 정보기술의 핵심](./Fundamental/README.md)
-2. [Language .................................. 프로그래밍 언어](#language)
-3. [Development .......................................... 개발](#development)
-4. [Database ..................................... 데이터베이스](./Database/README.md)
-5. [AI .............................................. 인공 지능](#ai)
-6. [Management .............. 시스템과 서비스에 대한 관리(정책)](./Management/README.md)
-7. [History .............................................. 이력](#history)
-8. [Reference ............................................ 참고](#reference)
+1. [Fundamental of IT(Information Technology) Education . 정보기술 교육의 핵심](./Fundamental/README.md)
+2. [Language ................................................. 프로그래밍 언어](#language)
+3. [Development ......................................................... 개발](#development)
+4. [Database .................................................... 데이터베이스](./Database/README.md)
+5. [AI ............................................................. 인공 지능](#ai)
+6. [Management ............................. 시스템과 서비스에 대한 관리(정책)](./Management/README.md)
+7. [History ............................................................. 이력](#history)
+8. [Reference ........................................................... 참고](#reference)
 
 
 # Language
