@@ -1,6 +1,24 @@
+- ![Generic badge](https://img.shields.io/badge/Important-Contents1_Contents2-red.svg)
+- ![Generic badge](https://img.shields.io/badge/Confirm-Contents1_Contents2-green.svg)
+- ![Generic badge](https://img.shields.io/badge/Reference-Contents1_Contents2-blue.svg)
+
+
 # Eclipse
 
-## Configuration
+
+# Contents
+1. Configuration
+2. Plug-in(Help > Install New Software)
+3. Tips
+
+
+# Configuration
+- When an error called "Downloading external resources is disabled." occurs(Window > Preference > Maven)
+
+```
+# Tick off the option "download artifact javadoc"
+```
+
 - Workspace settings when starting Eclipse
 
 ```
@@ -8,7 +26,7 @@
 C:\> notepad.exe %ECLIPSE%\configuration\.settings\org.eclipse.ui.ide.prefs
 ```
 
-- Code Templates at Eclipse(References > Java > Code Style > Code Templates > Code > New Java files)
+- Code Templates at Eclipse(Window > References > Java > Code Style > Code Templates > Code > New Java files)
 
 ```java
 /**
@@ -45,7 +63,8 @@ ${typecomment}
 ${type_declaration}
 ```
 
-## Plug-in(Help > Install New Software)
+
+# Plug-in(Help > Install New Software)
 - Properties Editor(http://propedit.sourceforge.jp/eclipse/updates)
 
 ```
@@ -58,7 +77,8 @@ jp.gr.java_conf.ussiy.app.propedit,6.0.5,plugins/jp.gr.java_conf.ussiy.app.prope
 ...
 ```
 
-## Tip
+
+# Tips
 - When a Git password Error occurs
 
 ```

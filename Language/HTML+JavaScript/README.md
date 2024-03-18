@@ -1,18 +1,33 @@
+- ![Generic badge](https://img.shields.io/badge/Important-Contents1_Contents2-red.svg)
+- ![Generic badge](https://img.shields.io/badge/Confirm-Contents1_Contents2-green.svg)
+- ![Generic badge](https://img.shields.io/badge/Reference-Contents1_Contents2-blue.svg)
+
+
 # JavaScript
 
-## JavaScript 특징과 기본 문법들
 
-### 에러 시 at Chrome
+# Contents
+1. JavaScript 특징과 기본 문법들
+2. 제어문
+3. 객체(Object)
+4. 함수(Function)
+5. 객체(HTML Element) 선택과 관리 및 이벤트 처리
+6. Ajax(Asychronous JavaScript and XML)
+7. jQuery
 
-### 개요
+
+# JavaScript 특징과 기본 문법들
+## 에러 시 at Chrome
+
+## 개요
 - Frontend vs. Backend
 - HTML, CSS, and JavaScript are downloaded from the Server and run in the Browser.
 - 탄생과 표준화 그리고 확장(jQuery, AngularJS, ReactJS, Vue.js, Node.js, PhoneGap 등)
 
-### 개발 환경
+## 개발 환경
 - Browser(IE, Edge, Chrome 등) + Editor(Notepad, EditPlus, SublimeText, Brackets, Visual Studio Code, Eclipse 등)
 
-### 기본 문법
+## 기본 문법
 - 문장(;)과 대소문자 구분 등
 - 선언문
 
@@ -48,22 +63,23 @@
 	- 삼항
 	- 연산자 우선 순위
 
-## 제어문
 
-### 조건문(Conditional Statements)
+# 제어문
+## 조건문(Conditional Statements)
 	- if
 	- if/else
 	- if/else if
 	- if/else if/else
 	- switch/case
 
-### 반복문(Loop Statements)
+## 반복문(Loop Statements)
 	- while
 	- do/while
 	- for
 	- break와 continue
 
-## 객체(Object)
+
+# 객체(Object)
 - 객체(Object) = 메소드(Method) + 속성(Property) + 이벤트(Event)
 - 객체(All of Object in Browser Script Engine) in JavaScript
 	- 내장 객체(Built-in Object): Object, String, Date, Array, Math, RegExp 등
@@ -71,7 +87,8 @@
 	- 문서 객체 모델(DOM, Document Object Model): HTML 문서 구조
 ![Object](./image/object.png)
 
-## 함수(Function)
+
+# 함수(Function)
 - 정의
 
 ```
@@ -87,22 +104,21 @@ function functionName() {…}
 	- parse*()
 	- eval() 등
 
-## 객체(HTML Element) 선택과 관리 및 이벤트 처리
 
-### 선택자(Selector)
+# 객체(HTML Element) 선택과 관리 및 이벤트 처리
+## 선택자(Selector)
+## 관리 메서드(Method)
+## 이벤트(Event) 등록과 처리 그리고 제거
 
-### 관리 메서드(Method)
 
-### 이벤트(Event) 등록과 처리 그리고 제거
-
-## Ajax(Asychronous JavaScript and XML)
+# Ajax(Asychronous JavaScript and XML)
 - 비동식 방식의 JavaScript와 XML
 - HyperText(화면 전환 필요) vs. Ajax 그리고 동기식(응답 대기 필요) vs. 비동기식
 - Text vs. HTML vs. XML vs. JSON
 
-## jQuery
 
-### jQuery란?
+# jQuery
+## jQuery란?
 - JavaScript의 대표적인 Library
 - 브라우저 호환성(DOM과 Event Object가 브라우저에 따라 상이함) 문제 해결?
 - 애니메이션 기능 등 지원
