@@ -26,9 +26,95 @@
 
 
 # 개발 환경
+## 자바(Java) 개발 환경
+- Java Standard/Enterprise/Micro Edition 그리고 JDK(Java Development Kit) vs. JRE(Java Runtime Environment)
+- JDK 다운로드와 설치
+- 환경 설정(JAVA_HOME과 PATH 등)
+- System.out.println("Hello, World!");
+
+## 이클립스(Eclipse)
+- 다운로드와 설치
+- Workspace와 Project
+- System.out.println("Hello, World!");
+
+## Eclipse 설정 및 사용법
+- Default Workspace Encoding
+- Editor Environment
+	- Line Number
+	- White Space
+	- Spelling(dictionary)
+- 자동 완성(Ctrl + Space)
+- [Code Template & Configuration](../../Development/Eclipse/README.md)
+- [Plug-in](../../Development/Eclipse/README.md)
+
+## To be continue
 
 
 # 특징 및 기본 문법
+## About Java
+- Java history
+	- Copyright 1990s © Sun Microsystems, James Gosling
+	- Base language는 UCSD Pascal, C++
+	- Netscape Navigator 2.0 + Java Applet on Internet
+- Java Program
+	- Java Applet(Web Browser에서 실행되며 Windows의 ActiveX와 유사)
+	- Java Application-AWT/Swing(Console 또는 Window 형태로 Local에서 실행되며 Windows의 EXE와 유사)
+	- Java Servlet(Applet과 달리 Server에서 실행되며 Post나 Get 방식으로 사용자의 입력 처리가 가능)
+	- JSP(Java Server Page, Server 기반으로 동적 Web Page를 생성하며 Windows의 ASP와 유사)
+	- Java Beans(Java에서 재사용이 가능한 Software Object를 만드는 기술의 결과로 만들어진 Component로서 각종 다양한 목적을 위한 소형 Module로 Windows의 DLL과 유사)
+	- EJB(Enterprise Java Beans, EJB는 확장성 있는 Application Server Component들을 지원하는 여러 Service들을 제공함으로써 Business Application들을 Component 단위로 쉽게 작성할 수 지원하며 Windows의 .NET과 유사)
+- Java Characteristic
+	- Scalability(From enterprise system to small device)
+	- Light and easy code + Real OOP(But OOP is not easy)
+	- Independent platform(Byte code at JVM: Write once, run everywhere)
+	- Source Charset support UTF-16 vs. UTF-8 vs. ANSI
+- Java vs. C++ and procedure, structured programming
+	- Remove pointer, structure, union
+	- All code in class
+- Java Folder
+- Class library Source: C:\jdk*\jar xvf src.jar
+![JRE](./image/jre.png)
+
+## Compile and run
+- For Beginner: 99%
+	- Text Error
+	- Syntax Error
+	- Case Sensitive
+	- Edit > Save > Compile > Run
+- Compile
+	- C:\Examle\javac HelloWorld.java
+- Run
+	- C:\Example\java HelloWorld
+	- C:\Example\appletviewer ExApplet.html
+- Error vs. Warning
+
+## 주석과 문장 그리고 변수와 상수 및 자료형
+- 주석
+	- //
+	- /* … */
+	- /** … * /
+	- 주석 for Java Doc
+- 문장(sentence or statement, ;)
+- 변수 선언(예약어 등 제약 사항, 카멜 표기법)과 상수(final), 자료형(정수, 실수, 문자, 문자열, 논리형 등) 그리고 초기화(initialize) 또는 대입(assign)
+- 묵시적(자동) 형변환 vs. 명시적(강제) 형변환
+
+## 연산자와 우선 순위
+- 단항, 이항, 삼항 연산자
+- 대입, 부호, 산술, 증가, 감소, 관계(비교), 논리, 복합 대입, 조건, 비트, 시프트 연산자
+
+## 제어문
+### 조건문(Conditional Statements)
+- if
+- if/else
+- if/else if
+- if/else if/else
+- switch/case
+
+### 반복문(Loop Statements)
+- while
+- do/while
+- for
+- break와 continue
 
 
 # 클래스와 객체 그리고 배열
