@@ -68,15 +68,16 @@
 	- DA(Data Architect: 데이터 표준, 구조, 마이그레이션 등 설계자-DBA의 상위 개념)
 	- BA(Business Architect: 기술적 관점이 아닌 업무 관점의 프로세스 설계자-실제 고객의 요구에 따라 첫 개발 지표가 되는 부분)
 	- QA(Quality Assurance: 산출물과 소스코드에 대한 품질 담당자)
-<img src="./image/it_org_chart.png" alt="정보기술조직도" width="50%" height="50%" />
+<img src="./image/it_org_chart.png" alt="정보기술조직도" width="80%" height="80%" />
 
 
 # 업무 프로세스와 개발 표준 가이드 for 웹 개발자
 ## 업무 프로세스
-![표준 업무와 폴더](./image/bizProcess.png)
+<img src="./image/bizProcess.png" alt="표준업무" width="80%" height="80%" />
+
 
 ## 개발 표준 가이드 for 웹 개발자
-![개발 표준 가이드](./image/devStandardGuide.png)
+<img src="./image/devStandardGuide.png" alt="개발 표준 가이드" width="80%" height="80%" />
 
 
 # 선택과 준비
@@ -91,8 +92,8 @@
 - [권장] 용어, 폰트, 로고 및 양식 등
 - [중요] 1) 목표 프로젝트(헌장)을 분석 및 설계하고 2) 과목과 솔루션을 진행하면서 모듈화하여 3) 구현 및 관리
 - [산출물] 요구 사항, 분석, 설계, 화면(프론트 vs. 백앤드 + 웹 vs. 앱 등)과 기능(화면 vs. 로직 vs. API 등) 그리고 검증
-![프로젝트 헌장](./image/projectCharter.png)
-![프로젝트 관리](./image/projectManage.png)
+<img src="./image/projectCharter.png" alt="프로젝트 헌장" width="80%" height="80%" />
+<img src="./image/projectManage.png" alt="프로젝트 관리" width="80%" height="80%" />
 
 
 # Network와 NOS 그리고 Server와 Client
@@ -162,13 +163,13 @@
 - TCP/IP(Transmission Control Protocol/Internet Protocol) Protocol
 	- 인터넷 표준 Protocol
 	- OSI 7 Layer의 Transport Layer(TCP)와 Network Layer(IP)가 혼합된 형태로 응용 Protocol(HTTP, FTP, …)의 Base Protocol
-![TCP/IP](./image/tcpip.png)
+<img src="./image/tcpip.png" alt="TCP/IP" width="80%" height="80%" />
 - TCP/IP 데이터 전송 과정
-![TCP/IP Flow](./image/tcpipFlow.png)
+<img src="./image/tcpipFlow.png" alt="TCP/IP Flow" width="80%" height="80%" />
 - TCP/IP Handshake(가상 회선의 상태와 의미)
-![TCP/IP Handshake](./image/tcpipHandshake.png)
+<img src="./image/tcpipHandshake.png" alt="TCP/IP Handshake" width="80%" height="80%" />
 - IP(Internet Protocol) Address Class
-![IP Class](./image/ipclass.png)
+<img src="./image/ipclass.png" alt="IP Address" width="80%" height="80%" />
 - Subnet Mask
 - Gateway IP
 - Class 당 예약되어 사용할 수 없는 IP
