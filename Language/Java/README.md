@@ -84,7 +84,7 @@
 	- Edit > Save > Compile > Run
 - Compile
 	- C:\Examle\javac HelloWorld.java
-![JDK](./image/compile.png){: width="50%" height="50%"){: .center}
+<img src="./image/compile.png" alt="compile" width="50%" height="50%" />
 - Run
 	- C:\Example\java HelloWorld
 	- C:\Example\appletviewer ExApplet.html

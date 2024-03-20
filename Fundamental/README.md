@@ -68,7 +68,7 @@
 	- DA(Data Architect: 데이터 표준, 구조, 마이그레이션 등 설계자-DBA의 상위 개념)
 	- BA(Business Architect: 기술적 관점이 아닌 업무 관점의 프로세스 설계자-실제 고객의 요구에 따라 첫 개발 지표가 되는 부분)
 	- QA(Quality Assurance: 산출물과 소스코드에 대한 품질 담당자)
-![정보기술 조직도](./image/it_org_chart.png)
+<img src="./image/it_org_chart.png" alt="정보기술조직도" width="50%" height="50%" />
 
 
 # 업무 프로세스와 개발 표준 가이드 for 웹 개발자
