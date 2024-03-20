@@ -72,7 +72,8 @@
 	- Remove pointer, structure, union
 	- All code in class
 - Java Folder
-- Class library Source: C:\jdk*\jar xvf src.jar
+![JDK](./image/jdk.png)
+- Class library Source: C:\jdk*\src.jar vs. C:\Program Files\Java\jdk*\src.zip
 ![JRE](./image/jre.png)
 
 ## Compile and run
@@ -83,6 +84,7 @@
 	- Edit > Save > Compile > Run
 - Compile
 	- C:\Examle\javac HelloWorld.java
+![JDK](./image/compile.png)
 - Run
 	- C:\Example\java HelloWorld
 	- C:\Example\appletviewer ExApplet.html
@@ -99,8 +101,8 @@
 - 묵시적(자동) 형변환 vs. 명시적(강제) 형변환
 
 ## 연산자와 우선 순위
-- 단항, 이항, 삼항 연산자
-- 대입, 부호, 산술, 증가, 감소, 관계(비교), 논리, 복합 대입, 조건, 비트, 시프트 연산자
+- 단항, 이항, 삼항
+- 대입, 부호, 산술, 증가, 감소, 관계(비교), 논리, 복합 대입, 조건, 비트, 시프트
 
 ## 제어문
 ### 조건문(Conditional Statements)
@@ -118,6 +120,36 @@
 
 
 # 클래스와 객체 그리고 배열
+## 객체 지향 프로그래밍(OOP, Object Oriented Programming)과 클래스(Class)
+- 객체(Object) =  속성(Property or Attribute) + 메서드(Method)<sup>단독이 아닌 객체에 속한 함수라는 의미에서 메서드란 이름 부여(속성도 동일함)</sup>
+- 클래스(Class) = 멤버 변수(Membership Field) + 멤버 함수(Member Function)
+- 패키지(Package)
+- 절차 지향 프로그래밍 vs. 객체 지향 프로그래밍(OOP, Object Oriented Programming)
+- 패키지(Package)와 클래스(Class) 선언과 멤버 변수(Membership Field)와 멤버 함수(Member Function) 정의
+
+## 메서드(Method) 또는 함수(Function)
+- 반환형 이름(매개변수) { …; return 반환값; }
+
+## 클래스(Class)와 인스턴스(Instance)
+- 클래스형 변수명 = new 생성자;
+
+## 생성자(Constructor)
+- 디폴트 생성자와 매개 변수 생성자
+
+## 접근 제어자(Access Modifier)
+- public, protected, private, DEFALUT(같은 패키지 내부에서만 접근 가능)
+
+## 기타
+- this
+- static 변수(=클래스 변수)와 메서드(=클래스 메서드)
+- 변수의 유효 범위: 지역(Local) 변수, 멤버(Instance) 변수, 클래스(Static) 변수
+
+## 배열(Array)
+- 배열의 선언(객체 포함)과 초기화 그리고 Index
+- 배열의 크기와 사용
+- 배열의 복사(System.arraycopy()) 그리고 배열의 주소 복사(shallow copy) vs. 값 복사(deep copy)
+- 다차원 배열
+- ArrayList 클래스(선언 시 크기 지정 없음)
 
 
 # 상속과 다형성
