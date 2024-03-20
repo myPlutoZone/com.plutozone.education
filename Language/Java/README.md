@@ -72,9 +72,9 @@
 	- Remove pointer, structure, union
 	- All code in class
 - Java Folder
-<img src="./image/jdk.png" alt="JDK" width="80%" height="80%" />
+![JDK](./image/jdk.png)
 - Class library Source: C:\jdk*\src.jar vs. C:\Program Files\Java\jdk*\src.zip
-<img src="./image/jre.png" alt="JRE" width="80%" height="80%" />
+![JRE](./image/jre.png)
 
 ## Compile and run
 - For Beginner: 99%
@@ -84,7 +84,7 @@
 	- Edit > Save > Compile > Run
 - Compile
 	- C:\Examle\javac HelloWorld.java
-<img src="./image/compile.png" alt="compile" width="80%" height="80%" />
+![JDK](./image/compile.png)
 - Run
 	- C:\Example\java HelloWorld
 	- C:\Example\appletviewer ExApplet.html
