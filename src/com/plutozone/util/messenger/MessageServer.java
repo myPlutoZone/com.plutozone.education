@@ -67,13 +67,13 @@ public class MessageServer {
 		try {
 			server = new ServerSocket(port);
 			
-			logger.info("-------------------------------------------");
-			logger.info("The server has started at " + port + " port");
-			logger.info("-------------------------------------------");
+			logger.info("---------------------------------------------------------------------------");
+			logger.info("com.plutozone.util.messenger.MessageServer has started at " + port + " port");
+			logger.info("---------------------------------------------------------------------------");
 			
 			while (true) {
 				client = server.accept();
-				logger.info("A new client has connected... " + client.getInetAddress().getHostAddress());
+				logger.info("A new client has connected... " + client.getInetAddress().getHostAddress() +" at com.plutozone.util.messenger.MessageServer");
 				
 				ClientHandler clientHandler = new ClientHandler(client);
 				clientHandler.start();
